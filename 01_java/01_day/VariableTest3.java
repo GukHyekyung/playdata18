@@ -34,6 +34,9 @@ class Student{
 // 핸들링 클래스 => Student 재사용클래스를 사용
 public class VariableTest3 {
 	public static void main(String[] args) {
+		
+		
+		
         /*
          *  1. 프로그램 실행
          *    ==> method area 메모리 관여된다.
@@ -58,6 +61,9 @@ public class VariableTest3 {
 		//로컬변수는 사용전에 반드시 초기화
 		int n=0;
 		System.out.println(n);
+		
+		
+		
 	}
 
 }

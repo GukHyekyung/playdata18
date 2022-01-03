@@ -29,6 +29,16 @@ public class PromotionTest {
 		String xxx = "Hello" + 1 + 2 + 3;
 		System.out.println(xxx);
 		
+		// 참조형 ( 상속관계) 
+		/*
+		 *    Object  ( 큰타입)
+		 *       |
+		 *     String (작은타입)
+		 */
+		String s = "Hello";
+		Object s2 = s; //다형성(Polymorphism)
+		//Integer i = s;
+		
 	}
 
 }
