@@ -1,7 +1,9 @@
 package exam3;
 
 public class Cat extends Pet {
+	
 	String color; //색상
+	
 	public Cat() {
 		super();
 	}
