@@ -1,0 +1,52 @@
+package lambda;
+
+/*
+ *    람다(lambda) 표현식
+ *   1. 등장배경
+ *     ==> 기능(메서드)에 집중하자.
+ *     ==> 함수형 프로그래밍의 기반이 된다.
+ *     
+ *   2. 인터페이스 작성후 사용하는 방법 3가지
+ *     가. 이름있는 클래스=>  AnonymousTest.java
+ *     나. 익명 클래스 ==> AnonymousTest2.java
+ *     
+ *     다. 람다 표현식(lambda expression)
+ *       ==> 모든 인터페이스를 람다 표현식으로 변경은 불가능하다.
+ *          반드시 하나의 추상메서드를 가진 인터페이스만 람다 표현식으로 변경이 가능하다.
+ *       ==> 메서드(파라미터,리턴)의 기능에 따른 분류 4가지
+ *          1) 파라미터 변수 없고 리턴값 없는 형태  ==> 람다표현식
+ *          2) 파라미터 변수 있고 리턴값 없는 형태  ==> 람다표현식
+ *          3) 파라미터 변수 없고 리턴값 있는 형태  ==> 람다표현식
+ *          4) 파라미터 변수 있고 리턴값 있는 형태  ==> 람다표현식
+ *       ==>  @FunctionalInterface 지정하면 반드시 하나의 추상 메서드만 사용하도록 강제
+ */
+
+@FunctionalInterface
+interface Flyer{
+	//1) 파라미터 변수 없고 리턴값 없는 형태  
+	public abstract void fly();
+}
+public class LambdaTest {
+	public static void main(String[] args) {
+		//익명 클래스
+		Flyer f = new Flyer() {
+			@Override
+			public void fly() {
+				System.out.println("익명 클래스.fly");
+			}
+		};
+		f.fly();
+		
+		//람다 표현식 ( =>:자바스크립트 , ->:자바 )
+		Flyer f2 = () -> {System.out.println("람다 표현식.fly");};
+		f2.fly();
+		
+		Flyer f3 = () -> System.out.println("람다 표현식.fly"); //단일문장인 경우 {} 생략가능
+		f3.fly();
+	}//end main
+}//end class
+
+
+
+
+
